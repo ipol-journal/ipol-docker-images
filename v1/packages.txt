@@ -22,3 +22,5 @@ tar
 ffmpeg
 tree
 libgl1
+wget
+curl
