@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:11.3.0-cudnn8-devel-ubuntu20.04
 
 ENV LANG C.UTF-8
 
@@ -15,4 +15,4 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.106/qua
 && dpkg -i quarto-0.9.106-linux-amd64.deb \
 && rm quarto-0.9.106-linux-amd64.deb
 
-RUN pip install --no-cache-dir torch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 -f https://download.pytorch.org/whl/cu102
+RUN pip install --no-cache-dir torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
