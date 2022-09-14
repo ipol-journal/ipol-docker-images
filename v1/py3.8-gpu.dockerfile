@@ -1,6 +1,7 @@
 FROM nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04
 
 ENV LANG C.UTF-8
+ENV TORCH_CUDA_ARCH_LIST=Pascal
 
 COPY packages.txt packages.txt
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y python3 python3-pip $(cat packages.txt) && rm -rf /var/lib/apt/lists/*
