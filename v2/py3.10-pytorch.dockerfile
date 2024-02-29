@@ -13,3 +13,4 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/qua
 && rm quarto-1.4.550-linux-amd64.deb
 
 RUN pip install --no-cache-dir torch==2.2.0+cpu torchvision==0.17.0+cpu torchaudio==2.2.0+cpu --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir pytorch-lightning==2.2.0

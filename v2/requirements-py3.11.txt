@@ -8,6 +8,7 @@ pillow==10.2.0
 iio==16
 imageio==2.34.0
 imagecodecs==2024.1.1
+tifffile==2024.2.12
 
 jupyter==1.0.0
 matplotlib==3.8.3
