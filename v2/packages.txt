@@ -63,3 +63,7 @@ patch
 unzip
 xz-utils
 zlib1g-dev
+
+ghostscript
+libopencv-dev
+libboost-all-dev
