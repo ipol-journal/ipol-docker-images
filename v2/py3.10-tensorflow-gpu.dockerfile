@@ -11,19 +11,23 @@ RUN apt-get update \
 &&  apt-get install -y software-properties-common \
 && add-apt-repository ppa:deadsnakes/ppa -y \
 && apt-get update \
-&& apt-get install -y python3.11-full $(cat packages.txt) \
+&& apt-get install -y python3.10-full $(cat packages.txt) \
 && rm -rf /var/lib/apt/lists/*
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py
 
 RUN pip install --no-cache-dir pip==24.0
 
-COPY requirements-py3.11.txt requirements.txt
+COPY requirements-py3.10.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/quarto-1.4.550-linux-amd64.deb \
 && dpkg -i quarto-1.4.550-linux-amd64.deb \
 && rm quarto-1.4.550-linux-amd64.deb
 
-RUN pip install --no-cache-dir tensorflow[and-cuda]==2.15.0.post1
+# can't use python 3.11 + cuda 11.x because of https://github.com/tensorflow/tensorflow/issues/61986
+# so we use 3.10 for now
+# see https://www.tensorflow.org/install/source?hl=fr#gpu
+# and https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+RUN pip install --no-cache-dir tensorflow[and-cuda]==2.14.1
