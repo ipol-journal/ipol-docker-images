@@ -1,6 +1,9 @@
 Any docker images can be used to build a demo. For example, one can use [a python base image](https://hub.docker.com/_/python) or [a debian base image](https://hub.docker.com/_/debian).
 
-However, IPOL also proposes a few prebuilt images for Python demos (recommended):
+However, IPOL also proposes a few prebuilt images for Python demos (recommended). See below of the descriptions of the images.
+
+# v2
+
 - `registry.ipol.im/ipol:v2-py3.9`
 - `registry.ipol.im/ipol:v2-py3.9-pytorch`
 - `registry.ipol.im/ipol:v2-py3.9-tensorflow`
@@ -14,25 +17,6 @@ However, IPOL also proposes a few prebuilt images for Python demos (recommended)
 - `registry.ipol.im/ipol:v2-py3.11-pytorch-gpu`
 - `registry.ipol.im/ipol:v2-py3.11-tensorflow`
 - `registry.ipol.im/ipol:v2-octave`
-
-Older images are also available:
-- `registry.ipol.im/ipol:v1-py3.7`
-- `registry.ipol.im/ipol:v1-py3.7-pytorch`
-- `registry.ipol.im/ipol:v1-py3.7-tensorflow`
-- `registry.ipol.im/ipol:v1-py3.8`
-- `registry.ipol.im/ipol:v1-py3.8-gpu`
-- `registry.ipol.im/ipol:v1-py3.8-pytorch`
-- `registry.ipol.im/ipol:v1-py3.8-pytorch-gpu`
-- `registry.ipol.im/ipol:v1-py3.8-tensorflow`
-- `registry.ipol.im/ipol:v1-py3.8-tensorflow-gpu`
-- `registry.ipol.im/ipol:v1-py3.9`
-- `registry.ipol.im/ipol:v1-py3.9-pytorch`
-- `registry.ipol.im/ipol:v1-py3.9-tensorflow`
-- `registry.ipol.im/ipol:v1-octave`
-
-See below for a description of the images.
-
-# v2
 
 ## ipol:v2-py
 
@@ -86,6 +70,20 @@ Octave is at version 7.3.0. The packages are not loaded by default, so you must 
 <hr />
 
 # v1
+
+- `registry.ipol.im/ipol:v1-py3.7`
+- `registry.ipol.im/ipol:v1-py3.7-pytorch`
+- `registry.ipol.im/ipol:v1-py3.7-tensorflow`
+- `registry.ipol.im/ipol:v1-py3.8`
+- `registry.ipol.im/ipol:v1-py3.8-gpu`
+- `registry.ipol.im/ipol:v1-py3.8-pytorch`
+- `registry.ipol.im/ipol:v1-py3.8-pytorch-gpu`
+- `registry.ipol.im/ipol:v1-py3.8-tensorflow`
+- `registry.ipol.im/ipol:v1-py3.8-tensorflow-gpu`
+- `registry.ipol.im/ipol:v1-py3.9`
+- `registry.ipol.im/ipol:v1-py3.9-pytorch`
+- `registry.ipol.im/ipol:v1-py3.9-tensorflow`
+- `registry.ipol.im/ipol:v1-octave`
 
 ## ipol:v1-py
 
