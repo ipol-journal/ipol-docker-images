@@ -46,7 +46,7 @@ The GPU variants are a bit special. They are built on top of `nvidia/cuda:11.4.3
 
 variants:
 - `py3.11-gpu`: python 3.11, cuda 11.4 (from the base image)
-- `py3.11-pytorch-gpu`: python 3.11, cuda 11.8, same pytorch as described above (2.2.0) but installed with cuda support (from https://download.pytorch.org/whl/cu118)
+- `py3.11-pytorch-gpu`: python 3.11, cuda 11.8, same pytorch as described above (2.2.0) but installed with cuda support (from https://download.pytorch.org/whl/cu118), and with `xformers==0.0.24`
 - `py3.10-tensorflow-gpu`: python 3.10, cuda 11.8, `tensorflow[and-cuda]==2.14.1`
 
 ## ipol:v2-octave
