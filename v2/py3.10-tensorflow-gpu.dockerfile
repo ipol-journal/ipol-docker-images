@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:11.4.3-devel-ubuntu20.04
 
 ENV LANG C.UTF-8
 ENV TORCH_CUDA_ARCH_LIST=Pascal
