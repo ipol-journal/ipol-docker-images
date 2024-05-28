@@ -103,9 +103,7 @@ liblapack-dev
 libblas-dev
 libopenblas-base
 libopenblas-dev
-libblas-dev
 libblas3
-liblapack-dev
 liblapacke-dev
 liblapacke
 libconfig9
